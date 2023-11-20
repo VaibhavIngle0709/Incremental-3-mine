@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +16,7 @@ password:string
 
   login():Observable<{role:string}>
   {
-    return new Observable(observable=>{
-      const fakeApiResponse={role:'ORGANIZER'}
-    });
+    return of({role:'ORGANIZER'})
   }
 
 }
