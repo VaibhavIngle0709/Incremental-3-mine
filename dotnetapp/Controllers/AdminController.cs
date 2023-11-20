@@ -23,7 +23,7 @@ namespace dotnetapp.Controllers
 
         [HttpGet]
         [Route("GetPlayers")]
-        public IActionResult GetPlayersMethod()
+        public IActionResult GetPlayers()
         {
             var data=context.Players.ToList();
             return Ok(data);
@@ -35,6 +35,12 @@ namespace dotnetapp.Controllers
         {
             var data=context.Teams.ToList();
             return Ok(data);
+        }
+        [HttpPut]
+        [Route("AddPlayer")]
+        public IActionResult PutPlayer(int id,Player p)
+        {
+            return Created("Added Record",p);
         }
 
         

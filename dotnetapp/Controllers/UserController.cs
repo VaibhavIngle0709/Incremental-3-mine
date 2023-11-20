@@ -7,8 +7,8 @@ namespace dotnetapp.Controllers
 {
 
     
-    // [ApiController]
-    // [Route("[controller]")]
+     [ApiController]
+     [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -17,7 +17,16 @@ namespace dotnetapp.Controllers
         {
             context = _context;
         }
-        
+         public IActionResult Login(User u)
+        {
+            return Ok();
+        }   
+
+        public IActionResult Register(User u)
+        {
+            return Ok();
+        }
+ 
 
        
         

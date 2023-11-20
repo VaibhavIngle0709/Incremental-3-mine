@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using dotnetapp.Models;
 
 namespace dotnetapp.Controllers
 {
@@ -11,14 +12,5 @@ namespace dotnetapp.Controllers
     public class PlayerController : ControllerBase
     {
 
-        public IActionResult Login()
-        {
-            return Ok();
-        }   
-
-        public IActionResult Register()
-        {
-            return Ok();
-        }
-    }
+          }
 }
