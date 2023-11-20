@@ -14,11 +14,27 @@ namespace dotnetapp.Controllers
 
     public class AdminController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext context;
 
-        public AdminController(ApplicationDbContext context)
+        public AdminController(ApplicationDbContext _context)
         {
-            _context = context;
+            context = _context;
+        }
+
+        [HttpGet]
+        [Route("GetPlayers")]
+        public IActionResult GetPlayersMethod()
+        {
+            var data=context.Players.ToList();
+            return Ok(data);
+        }
+
+        [HttpGet]
+        [Route("GetTeams")]
+        public IActionResult GetTeams()
+        {
+            var data=context.Teams.ToList();
+            return Ok(data);
         }
 
         

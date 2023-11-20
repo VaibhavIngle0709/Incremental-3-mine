@@ -12,13 +12,16 @@ using System.ComponentModel.DataAnnotations.Schema;
         [Required(ErrorMessage="Name is required.")]
         [MaxLength(17)]
         public string Name{get;set;}
-        public string Category{get;set;}
+      
 
         [ForeignKey("Team")]
         public int TeamId{get;set;}
 
+        public int Age{get;set;}
+
         [Range(1,int.MaxValue,ErrorMessage="Bidding amount must be greater than 0.")]
-        public decimal BiddingAmount{get;set;}
+        public decimal BiddingPrice{get;set;}
+        public string Category{get;set;}
 
         public Team ? team{get;set;}        
 

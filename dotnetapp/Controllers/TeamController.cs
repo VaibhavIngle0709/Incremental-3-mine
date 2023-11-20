@@ -36,9 +36,10 @@ namespace dotnetapp.Controllers
             {
                 if(data[i].TeamId==teamid)
                 {
-                    
+                    p.Add(data[i]);
                 }
             }
+            return Ok(p);
         }
 
 
@@ -48,7 +49,7 @@ namespace dotnetapp.Controllers
         {
             context.Teams.Add(t);
             context.SaveChanges();
-            return Created("TEAM CREATED");
+            return Created("Added Record",t);
         }
 
 

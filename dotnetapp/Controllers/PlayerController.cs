@@ -10,6 +10,15 @@ namespace dotnetapp.Controllers
     [Route("[controller]")]
     public class PlayerController : ControllerBase
     {
-        
+
+        public IActionResult Login()
+        {
+            return Ok();
+        }   
+
+        public IActionResult Register()
+        {
+            return Ok();
+        }
     }
 }
