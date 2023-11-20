@@ -8,6 +8,7 @@ import { Player } from 'src/models/player.model';
 })
 export class PlayerComponent implements OnInit {
  newPlayer:Player
+ players:any[]
   constructor() {
     
    }
