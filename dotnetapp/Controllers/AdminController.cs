@@ -10,7 +10,7 @@ namespace dotnetapp.Controllers
 {
 
     [ApiController]
-    [Route("[controller]")]
+    [Route("/[controller]")]
 
     public class AdminController : ControllerBase
     {

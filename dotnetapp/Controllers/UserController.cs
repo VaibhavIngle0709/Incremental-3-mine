@@ -8,7 +8,7 @@ namespace dotnetapp.Controllers
 {
     
     [ApiController]
-    [Route("[controller]")]
+    [Route("/[controller]")]
     public class UserController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -23,7 +23,7 @@ namespace dotnetapp.Controllers
         public IActionResult GetAllPlayers()
         {
             var data=context.Players.ToList();
-            return data;
+            return Ok(data);
         }
 
         [HttpGet]
@@ -31,7 +31,7 @@ namespace dotnetapp.Controllers
         public IActionResult GetSpecificPlayer(int Id)
         {
             var data=context.Players.Find(Id);
-            return data;
+            return Ok(data);
         }
 
         
