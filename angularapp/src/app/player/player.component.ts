@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Player } from 'src/models/player.model';
 
 @Component({
   selector: 'app-player',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
-
-  constructor() { }
+ newPlayer:Player
+  constructor() {
+    
+   }
 
   ngOnInit(): void {
   }
