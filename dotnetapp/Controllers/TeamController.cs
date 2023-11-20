@@ -19,7 +19,38 @@ namespace dotnetapp.Controllers
 
         [HttpGet]
         [Route("GetAllPlayers")]
-        public 
+        public IActionResult GetAllPlayers()
+        {
+            var data=context.Teams.ToList();
+            return Ok(data);
+        }
+
+
+        [HttpGet]
+        public IActionResult GetPlayersOfSpecificTeam(int teamid)
+        {
+            List<Player> data=context.Players.ToList();
+            List<Player> p=new List<Player>();
+
+            for(int i=0;i<data.Count;i++)
+            {
+                if(data[i].TeamId==teamid)
+                {
+                    
+                }
+            }
+        }
+
+
+        [HttpPost]
+        [Route("CreateTeam")]
+        public IActionResult PostTeam(Team t)
+        {
+            context.Teams.Add(t);
+            context.SaveChanges();
+            return Created("TEAM CREATED");
+        }
+
 
     }
 }
