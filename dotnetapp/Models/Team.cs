@@ -1,4 +1,9 @@
-﻿namespace dotnetapp.Models
+﻿using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Design;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace dotnetapp.Models
 {
     
   public class Team

@@ -20,4 +20,5 @@ namespace dotnetapp.Models
                 optionsBuilder.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=IPLDb;trusted_connection=false;Persist Security Info=False;Encrypt=False");
             }
         }
+    }
 }

@@ -7,14 +7,31 @@ using dotnetapp.Models;
 namespace dotnetapp.Controllers
 {
     
-
+    [ApiController]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext context;
 
-        public UserController(ApplicationDbContext context)
+        public UserController(ApplicationDbContext _context)
         {
-            _context = context;
+            context = _context;
+        }
+
+        [HttpGet]
+        [Route("GetAllPlayers")]
+        public IActionResult GetAllPlayers()
+        {
+            var data=context.Players.ToList();
+            return data;
+        }
+
+        [HttpGet]
+        [Route("GetSpecificPlayer")]
+        public IActionResult GetSpecificPlayer(int Id)
+        {
+            var data=context.Players.Find(Id);
+            return data;
         }
 
         

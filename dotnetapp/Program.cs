@@ -8,6 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddDbContext<ApplicationDbContext>(o=>o.UseSqlServer("User ID=sa;password=examlyMssql@123; server=localhost;Database=IPLDb;trusted_connection=false;Persist Security Info=False;Encrypt=False;"));
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

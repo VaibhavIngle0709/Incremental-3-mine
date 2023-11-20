@@ -1,5 +1,10 @@
 ﻿namespace dotnetapp.Models
 {
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore.Design;
+using System.ComponentModel.DataAnnotations;
+using System.Data;
+using System.ComponentModel.DataAnnotations.Schema;
      public class Player
     {
         public int Id{get;set;}
