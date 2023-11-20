@@ -37,12 +37,23 @@ namespace dotnetapp.Controllers
             return Ok(data);
         }
         [HttpPut]
-        [Route("AddPlayer")]
-        public IActionResult PutPlayer(int id,Player p)
+        public IActionResult PutPlayer(int teamid,Player p)
         {
+            context.Players.Add(p);
             return Created("Added Record",p);
         }
-
+        [HttpDelete]
+        public IActionResult DeletePlayer(int id)
+        {
+            var data=context.Players.Find(id);
+            if(data==null)
+            {
+                return NotFound();
+            }
+            context.Remove(data);
+            context.SaveChanges();
+            return Ok();
+        }
         
     }
 }
