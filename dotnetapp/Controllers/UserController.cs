@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using dotnetapp.Models;
-
 namespace dotnetapp.Controllers
 {
+
     
     [ApiController]
-    [Route("/[controller]")]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly ApplicationDbContext context;
@@ -18,22 +18,7 @@ namespace dotnetapp.Controllers
             context = _context;
         }
 
-        [HttpGet]
-        [Route("GetAllPlayers")]
-        public IActionResult GetAllPlayers()
-        {
-            var data=context.Players.ToList();
-            return Ok(data);
-        }
-
-        [HttpGet]
-        [Route("GetSpecificPlayer")]
-        public IActionResult GetSpecificPlayer(int Id)
-        {
-            var data=context.Players.Find(Id);
-            return Ok(data);
-        }
-
+       
         
     }
 }
