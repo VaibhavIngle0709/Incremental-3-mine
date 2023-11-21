@@ -12,6 +12,8 @@ import { OrganizerComponent } from './organizer/organizer.component';
 import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
+import { RouterModule } from '@angular/router';
+import { ListteamComponent } from './listteam/listteam.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +25,15 @@ import { MenuComponent } from './menu/menu.component';
     HomeComponent,
     OrganizerComponent,
     ErrorComponent,
-    MenuComponent
+    MenuComponent,
+    ListteamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
