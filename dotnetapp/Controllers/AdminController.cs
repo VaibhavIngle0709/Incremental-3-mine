@@ -25,9 +25,12 @@ namespace dotnetapp.Controllers
 
         [HttpPost]
         [Route("PostTeam")]
-        public IActionResult PostTeam()
+        public IActionResult PostTeam(Team t)
         {
-            return Ok();            
+            context.Players.Add(t);
+            context.SaveChanges();
+
+            return Created("Team Added",t);            
         }
         [HttpGet]
         [Route("GetTeams")]
@@ -40,7 +43,24 @@ namespace dotnetapp.Controllers
         [Route("PutTeam")]
         public IActioResult PutTeam(int teamid,Team t)
         {
+            var Team
             return ok();
+        }
+
+        [HttpDelete]
+        [Route("DeleteTeam")]
+        public IActionResult DeleteTeam()
+        {
+            return Ok();
+        }
+
+
+
+        [HttpPost]
+        [Route("PostPlayer")]
+        public IActionResult PostPlayer(Player p)
+        {
+            return Ok();
         }
 
 
