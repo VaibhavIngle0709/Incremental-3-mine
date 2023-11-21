@@ -21,14 +21,14 @@ namespace dotnetapp.Controllers
             context = _context;
         }
 
-        [HttpGet]
-        [Route("GetPlayers")]
-        public IActionResult GetPlayers()
-        {
-            var data=context.Players.ToList();
-            return Ok(data);
-        }
+       
 
+        [HttpPost]
+        [Route("PostTeam")]
+        public IActionResult PostTeam()
+        {
+            return Ok();            
+        }
         [HttpGet]
         [Route("GetTeams")]
         public IActionResult GetTeams()
@@ -37,10 +37,24 @@ namespace dotnetapp.Controllers
             return Ok(data);
         }
         [HttpPut]
-        public IActionResult PutPlayer(int teamid,Player p)
+        [Route("PutTeam")]
+        public IActioResult PutTeam(int teamid,Team t)
         {
-            context.Players.Add(p);
-            return Created("Added Record",p);
+            return ok();
+        }
+
+
+        [HttpGet]
+        [Route("GetPlayers")]
+        public IActionResult GetPlayers()
+        {
+            var data=context.Players.ToList();
+            return Ok(data);
+        }
+        [HttpPut]
+        public IActionResult PutPlayer(int playerid,Player p)
+        {
+            return Ok();
         }
         [HttpDelete]
         public IActionResult DeletePlayer(int id)
