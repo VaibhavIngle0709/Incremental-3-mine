@@ -43,15 +43,30 @@ namespace dotnetapp.Controllers
         [Route("PutTeam")]
         public IActioResult PutTeam(int teamid,Team t)
         {
-            var Team
-            return ok();
+            var temcheckidvalid=context.Teams.Find(teamid);
+            if(teamcheckidvalid==null)
+            {
+                return BadRequest("Team ID Not Found");
+            }
+            var tobj=context.Teams.Find(teamid);
+            tobj.TeamName=t.TeamName;
+            tobj.maximumBudget=t.maximumBudget;
+            context.SaveChanges();
+            return ok("Team Deleted");
         }
 
         [HttpDelete]
         [Route("DeleteTeam")]
-        public IActionResult DeleteTeam()
+        public IActionResult DeleteTeam(int teamid)
         {
-            return Ok();
+            var data=context.Teams.Find(teamid);
+            if(data==null)
+            {
+                return BadRequest();
+            }
+            context.Teams.Remove(data);
+            context.SaveChanges();
+            return Ok("Team Deleted");
         }
 
 
@@ -60,6 +75,8 @@ namespace dotnetapp.Controllers
         [Route("PostPlayer")]
         public IActionResult PostPlayer(Player p)
         {
+            context.Players.Add(p);
+            context.SaveChanges();
             return Ok();
         }
 
@@ -82,7 +99,7 @@ namespace dotnetapp.Controllers
             var data=context.Players.Find(id);
             if(data==null)
             {
-                return NotFound();
+                return NotFound("Player Id Not Found");
             }
             context.Remove(data);
             context.SaveChanges();
