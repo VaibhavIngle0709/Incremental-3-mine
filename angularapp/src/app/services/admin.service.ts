@@ -26,9 +26,14 @@ export class AdminService {
     return this.httpclient.get<any[]>(this.AdminUrl+"GetTeams");
   }
 
-  editTeam(id:number,t:Team):Observable<Team>
+  editTeam(teamid:number,t:Team):Observable<Team>
   {
-    return this.httpclient.put<Team>(this.AdminUrl+"PutTeam",id,t);
+    return this.httpclient.put<Team>(this.AdminUrl+"PutTeam"+teamid,t,this.httpOptions);
+  }
+
+  deleteTeam(teamid:number):Observable<de>
+  {
+
   }
 
 //-----------------------------------------------------------------------------------------------------------------
