@@ -14,8 +14,8 @@ using System.ComponentModel.DataAnnotations.Schema;
         public string Name{get;set;}
       
 
-      //  [ForeignKey("Team")]
-       // public int TeamId{get;set;}
+      [ForeignKey("Team")]
+        public int TeamId{get;set;}
 
         public int Age{get;set;}
 
