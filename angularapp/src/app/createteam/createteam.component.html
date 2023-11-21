@@ -1,0 +1,26 @@
+
+
+<div style="width:100% ; padding:40px ; backgroud-color:grey;">
+    <div style="width:100% ;background-color:darkblue ;text-align:center; padding:25px;">
+        <h4 style="color:white;">CREATING TEAM</h4>
+    </div>
+    <div style="width:100%; background-color:#333; text-align:left; padding:40px">
+    
+    
+        <form class="form-group" #createForm="ngForm">
+          
+            <div>
+                <label for="TeamName" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">TEAM NAME</label>
+                <input type="text" name="TeamName" class="form-control" id="TeamName" style="margin: 15px;">
+            </div>
+            <br>
+            <input type="submit" class="form-control" value="CREATE TEAM" style="color:white;background-color:#000; margin: 15px; padding:10px; font-size:15px">
+    
+            <input type="submit" class="form-control" value="CANCEL" style="color:white;background-color:red; margin: 15px; padding:10px; font-size:15px" (click)="createTeam(#createForm)">
+    
+        </form>
+    
+    
+        
+    </div>
+    </div>

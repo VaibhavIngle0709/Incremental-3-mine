@@ -15,6 +15,8 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { ListteamComponent } from './listteam/listteam.component';
 import { ListplayerComponent } from './listplayer/listplayer.component';
+import { CreateplayerComponent } from './createplayer/createplayer.component';
+import { CreateteamComponent } from './createteam/createteam.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ListplayerComponent } from './listplayer/listplayer.component';
     ErrorComponent,
     MenuComponent,
     ListteamComponent,
-    ListplayerComponent
+    ListplayerComponent,
+    CreateplayerComponent,
+    CreateteamComponent
   ],
   imports: [
     BrowserModule,
