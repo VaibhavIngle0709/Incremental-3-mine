@@ -10,15 +10,13 @@
        
     </thead>
     <tbody >
-        @foreach (var data in @Model)
-        {
             <tr>
-                <td>@data.TeamId</td>
-                <td style="text-align: center;">@data.TeamName</td>
-                <td style="text-align: center;">@Html.ActionLink("View","ViewPlayers",new{id=@data.TeamId})</td>
+                <td>1</td>
+                <td style="text-align: center;">Virat</td>
+                <td style="text-align: center;">View</td>
                
             </tr>    
-        }
+  
         
     </tbody>
 
@@ -39,6 +37,3 @@
     <a href='@Url.Action("CreateTeam", "Team")'> <input type="submit"  value="GET STARTED" style="color:white;background-color:#000; padding:7px; font-size:15px"></a>
 
 </div>
-</div>
-
-</p>
