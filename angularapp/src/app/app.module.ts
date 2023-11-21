@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { OrganizerComponent } from './organizer/organizer.component';
 import { ErrorComponent } from './error/error.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationComponent,
     HomeComponent,
     OrganizerComponent,
-    ErrorComponent
+    ErrorComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
