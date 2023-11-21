@@ -2,6 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Team } from 'src/models/team.model';
+import { HttpErrorResponse } from '@angular/common/http';
 
 
 @Injectable({
