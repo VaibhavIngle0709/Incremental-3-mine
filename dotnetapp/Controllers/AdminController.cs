@@ -52,7 +52,7 @@ namespace dotnetapp.Controllers
             tobj.TeamName=t.TeamName;
             tobj.maximumBudget=t.maximumBudget;
             context.SaveChanges();
-            return Ok("Team Deleted");
+            return Ok("Team Edited");
         }
 
         [HttpDelete]
@@ -104,17 +104,19 @@ namespace dotnetapp.Controllers
         [HttpPut]
         public IActionResult PutPlayer(int playerid,Player p)
         {
-             var teamcheckidvalid=context.Teams.Find(teamid);
-            if(teamcheckidvalid==null)
+            
+            var playercheckidvalid=context.Players.Find(playerid);
+            if(playercheckidvalid==null)
             {
-                return BadRequest("Team ID Not Found");
+                return BadRequest("Player ID Not Found");
             }
-            var tobj=context.Teams.Find(teamid);
-            tobj.TeamName=t.TeamName;
-            tobj.maximumBudget=t.maximumBudget;
+            var pobj=context.Players.Find(playerid);
+            pobj.Name=p.Name;
+            pobj.Age=p.Age;
+            pobj.BiddingPrice=p.BiddingPrice;
+            pobj.Category=p.Category;
             context.SaveChanges();
-            return Ok("Team Deleted");
-            return Ok();
+            return Ok("Player Record Edited");
         }
         [HttpDelete]
         public IActionResult DeletePlayer(int id)
@@ -126,7 +128,7 @@ namespace dotnetapp.Controllers
             }
             context.Remove(data);
             context.SaveChanges();
-            return Ok();
+            return Ok("Deleted Successfully");
         }
         
     }
