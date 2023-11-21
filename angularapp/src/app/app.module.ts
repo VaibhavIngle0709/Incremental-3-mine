@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { ListteamComponent } from './listteam/listteam.component';
+import { ListplayerComponent } from './listplayer/listplayer.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ListteamComponent } from './listteam/listteam.component';
     OrganizerComponent,
     ErrorComponent,
     MenuComponent,
-    ListteamComponent
+    ListteamComponent,
+    ListplayerComponent
   ],
   imports: [
     BrowserModule,
