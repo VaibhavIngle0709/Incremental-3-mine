@@ -18,7 +18,8 @@ namespace dotnetapp.Controllers
             context = _context;
         }
         [HttpGet]
-         public IActionResult Login()
+        [Route("Login")]
+         public IActionResult Login(User u)
         {
             return Ok();
         }   
