@@ -21,13 +21,13 @@ namespace dotnetapp.Controllers
             context = _context;
         }
 
-       
+       ///TEAMS CRUD/////////////////////////////////////////////////////////////////////////////////////////////////////
 
         [HttpPost]
         [Route("PostTeam")]
         public IActionResult PostTeam(Team t)
         {
-            context.Players.Add(t);
+            context.Teams.Add(t);
             context.SaveChanges();
 
             return Created("Team Added",t);            
@@ -41,9 +41,9 @@ namespace dotnetapp.Controllers
         }
         [HttpPut]
         [Route("PutTeam")]
-        public IActioResult PutTeam(int teamid,Team t)
+        public IActionResult PutTeam(int teamid,Team t)
         {
-            var temcheckidvalid=context.Teams.Find(teamid);
+            var teamcheckidvalid=context.Teams.Find(teamid);
             if(teamcheckidvalid==null)
             {
                 return BadRequest("Team ID Not Found");
@@ -52,7 +52,7 @@ namespace dotnetapp.Controllers
             tobj.TeamName=t.TeamName;
             tobj.maximumBudget=t.maximumBudget;
             context.SaveChanges();
-            return ok("Team Deleted");
+            return Ok("Team Deleted");
         }
 
         [HttpDelete]
@@ -62,14 +62,16 @@ namespace dotnetapp.Controllers
             var data=context.Teams.Find(teamid);
             if(data==null)
             {
-                return BadRequest();
+                return BadRequest("Team Id Not Found");
             }
             context.Teams.Remove(data);
             context.SaveChanges();
             return Ok("Team Deleted");
         }
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+/////////////////////PLAYER CRUD////////////////////////////////////////////////////////////////////
 
         [HttpPost]
         [Route("PostPlayer")]
@@ -80,7 +82,18 @@ namespace dotnetapp.Controllers
             return Ok();
         }
 
+        [HttpGet]
+        [Route("GetPlayerById")]
+        public IActionResult GetPlayerBYId(int playerid)
+        {
+            var data=context.Players.Find(playerid);
+            if(data==null)
+            {   
+                return BadRequest("Player ID Does Not Exist");
+            }
 
+            return Ok(data);
+        }
         [HttpGet]
         [Route("GetPlayers")]
         public IActionResult GetPlayers()
@@ -91,6 +104,16 @@ namespace dotnetapp.Controllers
         [HttpPut]
         public IActionResult PutPlayer(int playerid,Player p)
         {
+             var teamcheckidvalid=context.Teams.Find(teamid);
+            if(teamcheckidvalid==null)
+            {
+                return BadRequest("Team ID Not Found");
+            }
+            var tobj=context.Teams.Find(teamid);
+            tobj.TeamName=t.TeamName;
+            tobj.maximumBudget=t.maximumBudget;
+            context.SaveChanges();
+            return Ok("Team Deleted");
             return Ok();
         }
         [HttpDelete]
