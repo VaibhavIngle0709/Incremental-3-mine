@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, observable, of } from 'rxjs';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,14 +11,24 @@ import { Observable, observable, of } from 'rxjs';
 export class LoginComponent implements OnInit {
 username:string
 password:string
-  constructor() { }
+  constructor(private router:Router,private authService:AuthService) { }
 
   ngOnInit(): void {
   }
-
-  login():Observable<{role:string}>
-  {
-    return of({role:'ORGANIZER'})
+  login(): void {
+    this.authService.login(this.username, this.password).subscribe(
+      (response) => {
+        if (response.role === 'ADMIN') {
+          this.router.navigate(['/admin']);
+        } else if (response.role === 'ORGANIZER') {
+          this.router.navigate(['/organizer']);
+        }
+        // Handle other roles or scenarios if needed
+      },
+      (error) => {
+        // Handle login error if needed
+      }
+    );
   }
 
 }

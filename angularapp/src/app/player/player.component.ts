@@ -7,8 +7,11 @@ import { Player } from 'src/models/player.model';
   styleUrls: ['./player.component.css']
 })
 export class PlayerComponent implements OnInit {
- newPlayer:Player
- players:any[]
+  players : Player[]
+  newPlayer : Player ={ id: 1, name: 'Test Player', age: 25, category: 'Category A', biddingPrice: 200 }
+  playerdata : Player[] = [
+    { id: 1, name: 'Test Player', age: 25, category: 'Category A', biddingPrice: 100 }
+  ]
   constructor() {
     
    }
