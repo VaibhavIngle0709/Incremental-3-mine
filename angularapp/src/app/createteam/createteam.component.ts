@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./createteam.component.css']
 })
 export class CreateteamComponent implements OnInit {
-  teamData:Team
+  teamData:Team={id:0,name:"",maximumBudget:0}
   constructor(private as:AdminService,private route:Router,private ar:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -20,9 +20,9 @@ export class CreateteamComponent implements OnInit {
 
   createTeam(team:Team)
   {
-    console.log(team)
-   // this.as.createTeam(team);
-    //this.route.navigate['listteam']
+  
+    this.as.createTeam(team).subscribe(()=>{alert('Record Added Successfully')});
+    this.route.navigate['listteam']
     
   }
 }

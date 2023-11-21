@@ -9,10 +9,11 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./listteam.component.css']
 })
 export class ListteamComponent implements OnInit {
-
+  teamData:Team[]
   constructor(private as:AdminService,private route:Router,private ar:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.as.getTeams().subscribe(data=>{this.teamData.push(...data)});
   }
   getStarted()
   {

@@ -17,6 +17,7 @@ import { ListteamComponent } from './listteam/listteam.component';
 import { ListplayerComponent } from './listplayer/listplayer.component';
 import { CreateplayerComponent } from './createplayer/createplayer.component';
 import { CreateteamComponent } from './createteam/createteam.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CreateteamComponent } from './createteam/createteam.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
