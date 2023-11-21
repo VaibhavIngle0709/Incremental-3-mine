@@ -31,9 +31,9 @@ export class AdminService {
     return this.httpclient.put<Team>(this.AdminUrl+"PutTeam"+teamid,t,this.httpOptions);
   }
 
-  deleteTeam(teamid:number):Observable<de>
+  deleteTeam(teamid:number):Observable<Team>
   {
-
+    return this.httpclient.delete<Team>(this.AdminUrl+"")
   }
 
 //-----------------------------------------------------------------------------------------------------------------
