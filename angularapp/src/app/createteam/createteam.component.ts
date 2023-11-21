@@ -22,6 +22,7 @@ export class CreateteamComponent implements OnInit {
   {
   
     this.as.createTeam(team).subscribe(()=>{alert('Record Added Successfully')});
+   
     this.route.navigate['listteam']
     
   }

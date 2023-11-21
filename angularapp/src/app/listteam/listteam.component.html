@@ -7,13 +7,15 @@
     <thead>
         <th>TEAM ID</th>
         <th style="text-align: center;">TEAM NAME</th>
+        <th style="text-align: center;">MAXIMUM BUDGET</th>
         <th style="text-align: center;">PLAYER'S DETAIL</th>
        
     </thead>
     <tbody >
-            <tr>
-                <td>1</td>
-                <td style="text-align: center;">CSK</td>
+            <tr *ngFor="let data of teamData">
+                <td>{{data.teamId}}</td>
+                <td style="text-align: center;">{{data.teamName}}</td>
+                <td style="text-align: center;">{{data.maximumBudget}}</td>
                 <td style="text-align: center;">View</td>
                
             </tr>    
