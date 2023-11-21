@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-listteam',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListteamComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route:Router,private ar:ActivatedRoute) { }
 
   ngOnInit(): void {
+  }
+  getStarted()
+  {
+    
   }
 
 }
