@@ -1,13 +1,13 @@
 <p>login works!</p>
 <form>
     <label for="username">Username</label>
-    <input id="username" [(ngModel)]="username" name="username"  required>
-    <div *ngIf="usernameInput.invalid && usernameInput.touched">
+    <input type="text" id="username" [(ngModel)]="username" name="username"  required>
+    <div class-"error-message" *ngIf="username.invalid && (username.dirty||username.touched)">
         <p>Username is required</p>
     </div>
     <label for="password">Password</label>
-    <input id="password" [(ngModel)]="password" name="password" required>
-    <div *ngIf="passwordInput.invalid && passwordInput.touched">
+    <input type="text" id="password" [(ngModel)]="password" name="password" required>
+    <div class-"error-message" *ngIf="password.invalid && (password.dirty||password.touched)">
         <p>Password is required</p>
     </div>
     
