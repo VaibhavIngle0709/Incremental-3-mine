@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Team } from 'src/models/team.model';
 import { AdminService } from '../services/admin.service';
-import { ExecException, ExecOptions } from 'child_process';
 
 @Component({
   selector: 'app-listteam',
