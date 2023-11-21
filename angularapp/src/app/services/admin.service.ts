@@ -19,10 +19,10 @@ export class AdminService {
   {
     return this.httpclient.get<any[]>(this.AdminUrl+"GetPlayers");
   }
-
-  createTeam(t:Team)
+  
+  createTeam(t:Team):Observable<Team>
   {
-    return this.httpclient.post<any[]>(this.TeamUrl+"CreateTeam",t);
+    return this.httpclient.post<Team>(this.TeamUrl+"CreateTeam",t);
   }
   getTeams():Observable<any[]>
   {
