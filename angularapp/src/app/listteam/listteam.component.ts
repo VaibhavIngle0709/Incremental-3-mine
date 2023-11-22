@@ -20,6 +20,10 @@ export class ListteamComponent implements OnInit {
   {
     this.route.navigate(['createteam'])
   }
+  ViewDetails(teamid:number)
+  {
+    this.route.navigate(['\home'])
+  }
 
 
 }

@@ -18,6 +18,7 @@ import { ListplayerComponent } from './listplayer/listplayer.component';
 import { CreateplayerComponent } from './createplayer/createplayer.component';
 import { CreateteamComponent } from './createteam/createteam.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { DetailsteamComponent } from './detailsteam/detailsteam.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import {  HttpClientModule } from '@angular/common/http';
     ListteamComponent,
     ListplayerComponent,
     CreateplayerComponent,
-    CreateteamComponent
+    CreateteamComponent,
+    DetailsteamComponent
   ],
   imports: [
     BrowserModule,
