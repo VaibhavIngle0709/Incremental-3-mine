@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders,HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Player } from 'src/models/player.model';
 import { Team } from 'src/models/team.model';
 
 
@@ -46,6 +47,10 @@ export class AdminService {
    {
      return this.httpclient.get<any[]>(this.AdminUrl+"GetPlayers");
    }
+   createPlayer(p:Player):Observable<Player>
+  {
+    return this.httpclient.post<Player>(this.AdminUrl+"PostPlayer",p);
+  }
   
   
 }

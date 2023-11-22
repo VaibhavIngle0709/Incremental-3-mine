@@ -5,10 +5,10 @@
     </div>
     <div style="width:100%; background-color:#333; text-align:left; padding:40px">
     
-        <form class="form-group">
+        <form class="form-group" (ngSubmit)="createPlayer(playerData)">
             <div>
                 <label for="Name" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER NAME</label>
-                <input type="text" name="Name" class="form-control" id="Name" style="margin: 15px;">
+                <input type="text" name="Name" class="form-control" id="Name" style="margin: 15px;" [(ngModel)]="playerData.name>
             </div>
             <div>
                 <label for="Category" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER CATEGORY</label>
