@@ -9,11 +9,16 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./listplayer.component.css']
 })
 export class ListplayerComponent implements OnInit {
-players:Player[]
+players:Player[]=[]
   constructor(private as:AdminService,private ar:ActivatedRoute,private route:Router) { }
 
   ngOnInit(): void {
     this.as.getAllPlayers().subscribe(data=>{this.players.push(...data)});
+  }
+
+  Create()
+  {
+    this.route.navigate(['createplayer'])
   }
 
 }
