@@ -4,13 +4,14 @@ import { ListteamComponent } from './listteam/listteam.component';
 import { ListplayerComponent } from './listplayer/listplayer.component';
 import { HomeComponent } from './home/home.component';
 import { CreateteamComponent } from './createteam/createteam.component';
+import { DetailsteamComponent } from './detailsteam/detailsteam.component';
 
 const routes: Routes = [
   {path:"listteam",component:ListteamComponent},
   {path:"listplayer",component:ListplayerComponent},
   {path:"home",component:HomeComponent},
   {path:"createteam",component:CreateteamComponent},
-  {path:"detailsteam",component:}
+  {path:"detailsteam",component:DetailsteamComponent}
 ];
 
 @NgModule({
@@ -18,4 +19,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-``

@@ -22,7 +22,7 @@ export class ListteamComponent implements OnInit {
   }
   ViewDetails(teamid:number)
   {
-    this.route.navigate(['\home'])
+    this.route.navigate(['\detailsteam'])
   }
 
 
