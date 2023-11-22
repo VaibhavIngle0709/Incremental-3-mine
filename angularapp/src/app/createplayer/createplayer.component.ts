@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./createplayer.component.css']
 })
 export class CreateplayerComponent implements OnInit {
-player:Player={name:'',age:0,category:'',biddingPrice:0}
+player:Player={name:'',age:0,teamid:1,category:'',biddingPrice:0}
   constructor(private as:AdminService,private route:Router) { }
 
   ngOnInit(): void {

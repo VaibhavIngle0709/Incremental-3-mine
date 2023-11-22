@@ -5,22 +5,23 @@
     </div>
     <div style="width:100%; background-color:#333; text-align:left; padding:40px">
     
-        <form class="form-group" (ngSubmit)="createPlayer(playerData)">
+        <form class="form-group" (ngSubmit)="createPlayer(player)">
             <div>
                 <label for="Name" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER NAME</label>
-                <input type="text" name="Name" class="form-control" id="Name" style="margin: 15px;" [(ngModel)]="playerData.name>
+                <input type="text" name="Name" class="form-control" id="Name" style="margin: 15px;" [(ngModel)]="player.name">
             </div>
             <div>
                 <label for="Category" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER CATEGORY</label>
-                <input type="text" name="Category" class="form-control" id="Category" style="margin: 15px;">
+                <input type="text" name="Category" class="form-control" id="Category" style="margin: 15px;" [(ngModel)]="player.category" >
             </div>
             <div>
-                <label for="TeamId" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER TEAM ID</label>
-                <input type="text" name="TeamId" class="form-control" id="TeamId" style="margin: 15px;">
+                <label for="teamId">TeamID</label>
+                <input type="text" [(ngModel)]="player.teamid" id="teamId" class="form-control" name="teamid">
             </div>
+
             <div>
-                <label for="BiddingAmount" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER BIDDING AMOUNT</label>
-                <input type="text" name="BiddingAmount" class="form-control" id="BiddingAmount" style="margin: 15px;">
+                <label for="BiddingPrice" style="color:white;font-size:18px; font-style:bold; text-align:center;margin:3px;">PLAYER BIDDING AMOUNT</label>
+                <input type="text" name="BiddingAmount" class="form-control" id="BiddingAmount" style="margin: 15px;" [(ngModel)]="player.biddingPrice">
             </div>
             <br>
             <input type="submit" class="form-control" value="ADD PLAYER" style="color:white;background-color:#000;  font-size:15px; margin: 15px; padding:10px;">
