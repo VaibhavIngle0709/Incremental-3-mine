@@ -13,7 +13,7 @@ players:Player[]=[]
   constructor(private as:AdminService,private ar:ActivatedRoute,private route:Router) { }
 
   ngOnInit(): void {
-    this.as.getAllPlayers().subscribe(data=>{this.players.push(...data)});
+   // this.as.getAllPlayers().subscribe(data=>{this.players.push(...data)});
   }
 
   Create()

@@ -43,7 +43,7 @@ export class AdminService {
   ///////////////////////////////////////SERVICE PLAYER/////////////////////////////////
 
   //get all players
-   getAllPlayers():Observable<any[]>
+   getPlayers():Observable<any[]>
    {
      return this.httpclient.get<any[]>(this.AdminUrl+"GetPlayers");
    }
