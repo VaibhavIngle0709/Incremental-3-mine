@@ -22,9 +22,9 @@ export class AdminService {
   }
 
   //Get All Teams
-  getTeams():Observable<any[]>
+  getTeams():Observable<Team[]>
   {
-    return this.httpclient.get<any[]>(this.AdminUrl+"GetTeams");
+    return this.httpclient.get<Team[]>(this.AdminUrl+"GetTeams");
   }
 
   editTeam(teamid:number,t:Team):Observable<Team>
