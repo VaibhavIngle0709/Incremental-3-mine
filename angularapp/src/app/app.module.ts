@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 
 import {  HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './login1/login/login.component';
 
 
 @NgModule({

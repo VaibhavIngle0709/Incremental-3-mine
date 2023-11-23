@@ -49,7 +49,7 @@ namespace dotnetapp.Controllers
                 return BadRequest("Team ID Not Found");
             }
             var tobj=context.Teams.Find(teamid);
-            tobj.TeamName=t.TeamName;
+            tobj.Name=t.Name;
             tobj.maximumBudget=t.maximumBudget;
             context.SaveChanges();
             return Ok("Team Edited");
