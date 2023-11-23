@@ -12,9 +12,7 @@ export class AppComponent {
     
   }
   
-  ngOnInit(): void {
-    this.route.navigate([''])
-  }
+  
   
   
 }
