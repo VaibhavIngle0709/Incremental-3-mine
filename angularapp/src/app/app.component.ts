@@ -9,7 +9,11 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'angularapp';
   constructor(private route:Router){
-
+    
+  }
+  
+  ngOnInit(): void {
+    this.route.navigate([''])
   }
   
   
