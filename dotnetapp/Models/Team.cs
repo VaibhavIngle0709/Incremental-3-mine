@@ -8,9 +8,9 @@ namespace dotnetapp.Models
     
   public class Team
     {
-        [Key]
         public int ? TeamId{get;set;}
-        public string TeamName{get;set;}
+        public int ? id{get;set;}
+        public string Name{get;set;}
         public decimal maximumBudget{get;set;}
         public ICollection<Player> ?Players{get;set;}
     }
