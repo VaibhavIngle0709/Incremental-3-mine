@@ -18,7 +18,7 @@ export class AdminService {
   //Create New Team
   createTeam(t:Team):Observable<Team>
   {
-    return this.httpclient.post<Team>(this.AdminUrl+"PostTeam",t);
+    return this.httpclient.post<Team>(this.AdminUrl+"PostTeam",t,this.httpOptions);
   }
 
   //Get All Teams
