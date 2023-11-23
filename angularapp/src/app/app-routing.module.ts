@@ -5,9 +5,10 @@ import { ListplayerComponent } from './listplayer/listplayer.component';
 import { HomeComponent } from './home/home.component';
 import { CreateteamComponent } from './createteam/createteam.component';
 import { DetailsteamComponent } from './detailsteam/detailsteam.component';
-import { CreateplayerComponent } from './createplayer/createplayer.component';
+import { CreateplayerComponent } from './create/createplayer.component';
 
 const routes: Routes = [
+  {path:"",redirectTo:"home",pathMatch:'full'},
   {path:"listteam",component:ListteamComponent},
   {path:"listplayer",component:ListplayerComponent},
   {path:"home",component:HomeComponent},

@@ -15,7 +15,7 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { ListteamComponent } from './listteam/listteam.component';
 import { ListplayerComponent } from './listplayer/listplayer.component';
-import { CreateplayerComponent } from './createplayer/createplayer.component';
+import { CreateplayerComponent } from './create/createplayer.component';
 import { CreateteamComponent } from './createteam/createteam.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { DetailsteamComponent } from './detailsteam/detailsteam.component';
